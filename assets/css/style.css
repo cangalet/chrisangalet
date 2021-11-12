@@ -1,0 +1,236 @@
+/* General */
+a, article, aside, body, center, div, footer, form, h1, h2, h3, h4, h5, h6, header, i, img, li, menu, nav, ol, p, section, span, strong, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, footer, header, menu, nav, section {
+  display: block;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+body  {
+  font-family: 'Poppins', sans-serif;
+  font-size: 125%;
+  background: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+  position: relative;
+}
+
+a  {
+  text-decoration: none;
+  color: white;
+}
+
+/* Side Menu */
+
+.menuButton {
+    cursor: pointer;
+    position: fixed;
+    height: 30px;
+    width: 35px;
+    padding: 10px;
+    top: 35px;
+    right: 25px;
+    z-index: 20;
+    display: none;
+  }
+  
+  .menuButton:focus {
+    border: 2px solid #BF8F00;
+  }
+  
+  .menuButton .linesContainer {
+    position: relative;
+  }
+  
+  .menuButton .linesContainer span, .menuButton .linesContainer span:before, .menuButton .linesContainer span:after {
+    border-radius: 5px;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  
+  .menuButton .linesContainer span {
+    top: 3px;
+    left: -6px;
+  }
+  
+  .menuButton .linesContainer span:before {
+    top: -10px;
+  }
+  
+  .menuButton .linesContainer span:after {
+    bottom: -10px;
+  }
+  
+  .sideMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 105px;
+    height: 100vh;
+    background-color: #BF8F00;
+    position: fixed;
+    color: white;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    z-index: 10;
+  }
+  
+  .sideMenu p {
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    background-color: #fff;
+  }
+  
+  .sideMenu nav {
+    padding: 26px;
+  }
+  
+  .sideMenu nav a {
+    padding: 13px 17px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    border-radius: 6px;
+    width: 80%;
+    position: relative;
+  }
+  
+  .sideMenu nav a span {
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    position: absolute;
+    left: 55px;
+    top: 18px;
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  
+  .sideMenu nav a:hover, .sideMenu nav a:focus {
+    background-color: #d9a200;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sideMenu .scrollDown {
+    height: 50px;
+    position: relative;
+    left: 35px;
+  }
+  
+  .sideMenu .scrollDown .lni-arrow-down {
+    line-height: 1.2;
+    font-size: 2rem;
+  }
+  
+  .sideMenu .scrollDown .scrollDownText {
+    font-size: 0.75rem;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-weight: 300;
+  }
+  
+  .hoverMenu {
+    width: 220px;
+  }
+  
+  .menuShow {
+    display: block;
+  }
+  
+  .menuHide {
+    display: none;
+  }
+  
+  .sideMenuHide {
+    left: -300px;
+  }
+  
+  .sideMenuShow {
+    left: 0;
+  }
+
+/**********************/
+/*   MIN WIDTH 991PX  */
+/**********************/
+@media (min-width: 991px) {
+  .navItemName {
+    display: none;
+  }
+  .sideMenu:hover {
+    width: 220px;
+  }
+  .sideMenu:hover .navItemName {
+    display: block;
+  }
+}
+
+/**********************/
+/*   MAX WIDTH 900PX  */
+/**********************/
+@media (max-width: 990px) {
+  .outerWrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+  .sideMenu {
+    width: 220px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .sideMenu nav {
+    margin-top: 40px;
+  }
+  .menuButton {
+    display: block;
+  }
+  header {
+    display: block;
+    padding: 80px 0;
+    height: auto;
+  }
+  header .heroDescription {
+    text-align: center;
+    margin-top: 50px;
+  }
+  header .heroDescription .socialsResume {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .socialsList {
+    margin-left: 10px;
+  }
+} 
