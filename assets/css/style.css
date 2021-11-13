@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* General */
 a, article, aside, body, center, div, footer, form, h1, h2, h3, h4, h5, h6, header, i, img, li, menu, nav, ol, p, section, span, strong, ul {
   margin: 0;
@@ -104,7 +109,7 @@ a  {
     font-size: 3rem;
     letter-spacing: 1px;
     font-weight: 300;
-    background-color: #fff;
+    background-color: #f7f7f7;
   }
   
   .sideMenu nav {
@@ -179,6 +184,20 @@ a  {
   
   .sideMenuShow {
     left: 0;
+  }
+
+  .visuallyHidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0);
+    overflow: hidden;
   }
 
 /**********************/
