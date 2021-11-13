@@ -321,6 +321,36 @@ section {
   height: 35px;
 }
 
+/* Contact Section */
+
+.contactContainer i {
+  color: #4d4d4d;
+  padding-right: 5px;
+}
+
+.contactContainer a {
+  color: #BF8F00;
+  text-decoration: none;
+}
+
+.contactTypes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.contactTypes .contactBox {
+  -webkit-box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
+          box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  border: 1px solid #eee;
+  padding: 24px;
+  border-radius: 15px;
+}
+
 /**********************/
 /*   MIN WIDTH 991PX  */
 /**********************/
